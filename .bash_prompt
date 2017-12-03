@@ -52,16 +52,31 @@ enable_color_support() {
 
 # -----------------------------------------------------------------------
 
+# What kind of session we use ? Local, Telnet, SSH
+
+set_connection() {
+	if [[ -n "$SSH_CLIENT$SSH2_CLIENT" ]] ; then
+		SESSION="\u@\h (ssh) "
+	else
+		local SESSION_SRC=$(who am i | sed -n 's/.*(\(.*\))/\1/p')
+		if [[ -z "$SESSION_SRC" || "$SESSION_SRC" = ":"* ]] ; then
+			SESSION=""
+		else
+			SESSION="\u@\h "
+		fi
+	fi
+}
+
+# -----------------------------------------------------------------------
+
 set_prompt() {
-
-	local cyan="[\e[0;36m\]"
-	local blue="[\e[01;34m\]"
-
 
 	# set variable identifying the chroot you work in (used in the prompt below)
 	if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 		debian_chroot=$(cat /etc/debian_chroot)
 	fi
+
+	set_connection
 
 	# Pretty Prompt
 	#
@@ -69,7 +84,9 @@ set_prompt() {
 	# [Cyan] User@Host [/Cyan]
 	# [Purple] Working directory
 	# [No Colour]:
-	export PS1='${debian_chroot:+($debian_chroot)} ☁️ \[\e[0;36m\] \u@\h\[\e[0;36m\] \[\e[0;35m\]\W\[\033[0m\]\[\e[0m\]: '
+	PS1="${debian_chroot:+($debian_chroot)}\[\e[0;36m\]${SESSION}\[\e[0;36m\]\[\e[0;35m\]\W\[\033[0m\]\[\e[0m\] $ "
+
+	export PS1
 
 }
 
