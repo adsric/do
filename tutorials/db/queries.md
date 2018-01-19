@@ -1,4 +1,4 @@
-# SQL Queries
+# DB Queries
 
 
 ## WordPress
