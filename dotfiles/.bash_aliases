@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# -----------------------------------------------------------------------
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -7,17 +9,15 @@ alias cd..="cd .."
 
 # -----------------------------------------------------------------------
 
-alias :q="exit"
 alias c="clear"
-alias g="git"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias l='ls -l'
-alias la='ls -la'
-alias ll='ls -alF'
-alias lsd="ls -l | grep --color=never '^d'"
+alias l='ls -lFh'
+alias la='ls -lAh'
+alias duh='du -hs'
+alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
+alias :q="exit"
 alias q="exit"
 alias rm="rm -rf --"
-alias t="tmux"
 
 # -----------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ v() {
 
 # Edit the hosts.
 
-alias hosts="sudo vim /etc/hosts"
+alias edit-hosts="sudo vim /etc/hosts"
 
 # -----------------------------------------------------------------------
 
