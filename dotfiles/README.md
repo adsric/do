@@ -1,4 +1,4 @@
-# DO dotfiles
+# dotfiles
 
 These are my terminal and dotfiles that I start with when I set up a
 new droplet.

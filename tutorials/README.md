@@ -1,4 +1,4 @@
-# DO Tutorials
+# Tutorials
 
 Comprehensive guides for devs and sysadmins.
 
@@ -22,6 +22,7 @@ performance and security, while also ensuring that resources are served with the
 
 * [example.com](nginx/example.md) — handles a virtual hosts traffic for both www and non-www
 * [no-default](nginx/no-default.md) — drop requests to unknown virtual hosts
+* [cdn](nginx/cdn.md) — handles a virtual hosts traffic as a CDN for static files
 * [Miscellaneous](nginx/misc.md) - miscellaneous rules
 
 ### DB

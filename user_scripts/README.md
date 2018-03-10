@@ -1,8 +1,6 @@
-# DO Scripts
+# Scripts
 
-This repository contains a collection of scripts that can be used to
-help provision a Droplet.
-
+A collection of scripts that can be used to help provision a Droplet.
 
 When creating a new Droplet, some of these scripts can be provided as "user data."
 
