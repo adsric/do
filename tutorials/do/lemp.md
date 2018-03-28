@@ -121,7 +121,7 @@ Now you need to create the Nginx configuration file for the virtual host:
 cp /etc/nginx/sites-available/default /etc/nginx/sites-available/example.com
 ```
 
-The content of the Nginx configuration file is: [example.com](/nginx/example.md)
+The content of the Nginx configuration file is: [example.com](/tutorials/nginx/example.md)
 
 Enable the configuration and create a symbolic link for the new configuration file from sites-enabled directory to sites-available:
 
