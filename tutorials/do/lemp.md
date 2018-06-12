@@ -218,6 +218,12 @@ In the database administration console:
 GRANT ALL PRIVILEGES ON * . * TO 'root'@'localhost' IDENTIFIED BY 'db_password' WITH GRANT OPTION;
 ```
 
+* set a new password for a username
+
+```
+SET PASSWORD FOR 'dbuserexample'@'localhost' = PASSWORD('NewPass');
+```
+
 ## Step Five: test your installation and configuration
 
 Open your Web Browser and go to your URL
