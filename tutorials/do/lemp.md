@@ -1,4 +1,4 @@
-# How to setup your LEMP server on Ubuntu 17.10
+# How to setup your LEMP server on Ubuntu 18.04 LTS
 
 The goal of this tutorial is to provide the steps needed for the right environment configuration to host a PHP application. To achieve this, you need to install and configure:
 
@@ -6,7 +6,7 @@ The goal of this tutorial is to provide the steps needed for the right environme
 * a database server: MariaDB;
 * a PHP7 interpreter.
 
-The following steps are based on an Ubuntu 17.10 installation on the Cloud Hosting Provider
+The following steps are based on an Ubuntu 18.04 LTS installation on the Cloud Hosting Provider
 DigitalOcean.
 
 
@@ -105,7 +105,7 @@ apt-get install php-fpm php-mysql
 Install the PHP extensions:
 
 ```
-apt-get install php7.1-gd php7.1-curl php7.1-json php7.1-xml
+apt-get install php7.2-gd php7.2-curl php7.2-json php7.2-xml
 ```
 
 Give the right ownership to the directory (example is the user owner, www-data is the group owner) and permission (750) in recursive way:
@@ -156,7 +156,7 @@ service nginx restart
 
 ## Step Four: install the Database (MariaDB)
 
-Ubuntu 17.10 doesn't package the latest MariaDB so follow the steps to get
+Ubuntu 18.04 doesn't package the latest MariaDB so follow the steps to get
 the latest stable version.
 
 To add MariaDB repository to Ubuntu, run the commands below to
@@ -169,12 +169,12 @@ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F2
 
 After adding the repository key above, continue below to add MariaDB repository.
 
-Before adding the repository below, please visit the download page and get the latest (current) version number. At the time of this post, the latest stable version was at 10.2.
+Before adding the repository below, please visit the download page and get the latest (current) version number. At the time of this post, the latest stable version was at 10.3.
 
 When you find the current version number, replace the highlighted number in the command with it, then run the command:
 
 ```
-sudo sh -c "echo 'deb [arch=amd64,i386] https://mirrors.evowise.com/mariadb/repo/10.2/ubuntu '$(lsb_release -cs)' main' > /etc/apt/sources.list.d/MariaDB-10.2.list"
+sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/10.3/ubuntu bionic main'
 ```
 
 Install the latest database server with the following commands:
