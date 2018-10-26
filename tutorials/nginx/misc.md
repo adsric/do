@@ -39,8 +39,8 @@ location ~* /(?:uploads|files)/.*\.php$ {
 # Multisite subdirectory rewrite rules
 if (!-e $request_filename) {
 	rewrite /wp-admin$ $scheme://$host$uri/ permanent;
-	rewrite ^/[_0-9a-zA-Z-]+(/wp-.*) /app$1 last;
-	rewrite ^/[_0-9a-zA-Z-]+(/.*\.php)$ /app$1 last;
+	rewrite ^/[_0-9a-zA-Z-]+(/wp-.*) /cms/app$1 last;
+	rewrite ^/[_0-9a-zA-Z-]+(/.*\.php)$ /cms/app$1 last;
 }
 ```
 

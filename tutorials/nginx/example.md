@@ -41,7 +41,7 @@ server {
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 	location ~ \.php$ {
 		include snippets/fastcgi-php.conf;
-		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+		fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
 
 		# This is a robust solution for path info security issue
 		# works with "cgi.fix_pathinfo = 1" in /etc/php.ini (default)

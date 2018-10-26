@@ -111,7 +111,7 @@ apt-get install php7.2-gd php7.2-curl php7.2-json php7.2-xml
 Give the right ownership to the directory (example is the user owner, www-data is the group owner) and permission (750) in recursive way:
 
 ```
-chown -R example:www-data /var/www/example.com/
+chown -R example:www-data /var/www/example.com/*
 chmod -R 750 /var/www/example.com/
 ```
 

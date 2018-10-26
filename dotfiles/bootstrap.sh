@@ -36,15 +36,15 @@ apt install vim
 
 # Setup PHP-CLI Options
 
-sudo sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.1/cli/php.ini
-sudo sed -i "s/;date.timezone.*/date.timezone = GMT/" /etc/php/7.1/cli/php.ini
+sudo sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.2/cli/php.ini
+sudo sed -i "s/;date.timezone.*/date.timezone = GMT/" /etc/php/7.2/cli/php.ini
 
 # Setup PHP-FPM Options
 
-sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.1/fpm/php.ini
-sed -i "s/upload_max_filesize = .*/upload_max_filesize = 10M/" /etc/php/7.1/fpm/php.ini
-sed -i "s/post_max_size = .*/post_max_size = 10M/" /etc/php/7.1/fpm/php.ini
-sed -i "s/;date.timezone.*/date.timezone = GMT/" /etc/php/7.1/fpm/php.ini
+sed -i "s/memory_limit = .*/memory_limit = 512M/" /etc/php/7.2/fpm/php.ini
+sed -i "s/upload_max_filesize = .*/upload_max_filesize = 10M/" /etc/php/7.2/fpm/php.ini
+sed -i "s/post_max_size = .*/post_max_size = 10M/" /etc/php/7.2/fpm/php.ini
+sed -i "s/;date.timezone.*/date.timezone = GMT/" /etc/php/7.2/fpm/php.ini
 
 # Tweak Nginx
 
@@ -53,4 +53,4 @@ sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/" 
 # Restart Sevices
 
 service nginx restart
-service php7.1-fpm restart
+service php7.2-fpm restart
