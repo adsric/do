@@ -24,7 +24,7 @@ sudo chmod -R g+w /var/www
 ## File permission commands
 
 ```
-find . -type f | xargs chmod 664
+find . -type f | xargs chmod 644
 find . -type d | xargs chmod 775
 find . -type d | xargs chmod +s
 ```
