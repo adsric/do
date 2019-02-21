@@ -63,6 +63,13 @@ ufw allow 'Nginx HTTP'
 ufw allow 'OpenSSH'
 ```
 
+For SSL
+
+```
+ufw allow 'Nginx Full'
+ufw delete allow 'Nginx HTTP'
+```
+
 Activate the firewall:
 
 ```

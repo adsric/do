@@ -21,12 +21,14 @@ sudo chgrp -R www-data /var/www
 sudo chmod -R g+w /var/www
 ```
 
-## File permission commands
-
+To change all the directories to 755 (drwxr-xr-x):
 ```
-find . -type f | xargs chmod 644
-find . -type d | xargs chmod 775
-find . -type d | xargs chmod +s
+find /opt/lampp/htdocs -type d -exec chmod 755 {} \;
+```
+
+To change all the files to 644 (-rw-r--r--):
+```
+find /opt/lampp/htdocs -type f -exec chmod 644 {} \;
 ```
 
 ## SFTP Account creation
