@@ -54,8 +54,8 @@ usermod -m -d /var/www/example.com username
 Step one - Create the Password File Using the OpenSSL Utilities
 
 ```
-sudo sh -c "echo -n 'username:' >> /etc/nginx/.htpasswd"
-sudo sh -c "echo "password" | openssl passwd -apr1 -stdin >> /etc/nginx/.htpasswd"
+sudo sh -c "echo -n 'username:' >> /var/www/example.com/.htpasswd"
+sudo sh -c "echo "password" | openssl passwd -apr1 -stdin >> /var/www/example.com/.htpasswd"
 ```
 
 Step two - Configure Nginx Password Authentication
