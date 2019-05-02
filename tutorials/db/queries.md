@@ -26,3 +26,21 @@ The query string to remove all post revisions:
 ```
 DELETE FROM wp_posts WHERE post_type = "revision";
 ```
+
+The query to view the postmeta fields that do not have any post relation
+
+```
+SELECT * FROM wp_postmeta pm LEFT JOIN wp_posts wp ON wp.ID = pm.post_id WHERE wp.ID IS NULL;
+```
+
+The query to show only the postmeta fields by field name.
+
+```
+SELECT * FROM wp_postmeta pm LEFT JOIN wp_posts wp ON wp.ID = pm.post_id WHERE wp.ID IS NULL AND pm.meta_key LIKE '%my-custom-field-name%';
+```
+
+The query once correct to delete without problems and errors the postmeta fields.
+
+```
+DELETE FROM wp_postmeta pm LEFT JOIN wp_posts wp ON wp.ID = pm.post_id WHERE wp.ID IS NULL AND pm.meta_key LIKE '%my-custom-field-name%';
+```
