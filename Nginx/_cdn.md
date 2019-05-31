@@ -1,6 +1,4 @@
-# A Virtual Host CDN Configuration
-
-A very simple Nginx configuration file to use a Nginx block as a CDN is:
+# Virtual Host Configuration: cdn.example.com
 
 ```
 server {

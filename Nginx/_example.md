@@ -1,6 +1,4 @@
-# A Virtual Host Configuration
-
-The content of the (example.com) Nginx configuration file is:
+# Virtual Host Configuration: example.com
 
 ```
 # www to non-www redirect

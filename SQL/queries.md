@@ -1,7 +1,8 @@
-# DB Queries
+# SQL Queries
 
+Learn by examples! This documents supplements all explanations with clarifying examples.
 
-## WordPress
+## WordPress Specific
 
 The query string to rename a custom post type:
 
