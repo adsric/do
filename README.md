@@ -1,8 +1,10 @@
-# Today I learned
+# #TIL
 
-I constantly learn new things. This is a repo to share those learnings. TILs are short Markdown documents (a few sentences + code) explaining concepts, bits of syntax, commands, or tips recently learned.
+**Today I Learned...**
 
-For new TILs, watch this repo.
+Useful little tips, tricks and pieces of knowledge I learned today.
+
+TIL's are short Markdown documents (a few sentences + code) explaining concepts, bits of syntax, commands, tips, or tricks recently learned.
 
 ## Table of contents
 
